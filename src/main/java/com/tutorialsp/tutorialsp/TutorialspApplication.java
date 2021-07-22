@@ -16,7 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 )
 public class TutorialspApplication {
 	public static void main(String[] args) {
-		System.out.println("Marriage");
+		System.out.println("Hello");
 		ConfigurableApplicationContext context = SpringApplication.run(TutorialspApplication.class, args);
 		Product product = context.getBean(Product.class);
 		product.setName("Monitor");
