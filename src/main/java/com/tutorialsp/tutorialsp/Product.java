@@ -1,8 +1,5 @@
 package com.tutorialsp.tutorialsp;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Product {
 
     private String name;
