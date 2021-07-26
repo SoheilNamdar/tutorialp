@@ -10,7 +10,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 @EnableAutoConfiguration(
 		exclude = {
-				DataSourceAutoConfiguration.class,
 				HibernateJpaAutoConfiguration.class
 		}
 )
@@ -18,10 +17,17 @@ public class TutorialspApplication {
 	public static void main(String[] args) {
 		System.out.println("Hello");
 		ConfigurableApplicationContext context = SpringApplication.run(TutorialspApplication.class, args);
+		Product product1 = context.getBean(Product.class);
+		product1.setName("Monitor");
+		product1.setPrice(1140);
+		System.out.println(product1.toString());
+		Product product2 = (Product) context.getBean("product");
+		product2.setName("Monitor");
+		product2.setPrice(1140);
+		System.out.println(product2.toString());
 		Product product = context.getBean(Product.class);
-		product.setName("Monitor");
-		product.setPrice(1140);
-		System.out.println(product.toString());
+		product.user.setEmail("soheilnamdar@yhaoo.com");
+		System.out.println(product.user.getEmail());
 	}
 
 }

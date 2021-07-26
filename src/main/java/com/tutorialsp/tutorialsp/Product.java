@@ -1,6 +1,11 @@
 package com.tutorialsp.tutorialsp;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Product {
+
+    @Autowired
+    User user;
 
     private String name;
     private float price;
